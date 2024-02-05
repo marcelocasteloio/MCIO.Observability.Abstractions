@@ -19,4 +19,9 @@
 		<None Include="..\..\images\icon.png" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <PackageReference Include="MarceloCastelo.IO.Core" Version="1.1.0" />
+	  <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="8.0.0" />
+	</ItemGroup>
+
 </Project>
