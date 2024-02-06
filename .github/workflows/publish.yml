@@ -33,7 +33,7 @@ jobs:
       run: dotnet build -c Release
 
     - name: Pack
-      run: dotnet pack -c Release src/Core/MCIO.Observability.Abstractions.csproj /p:Version='${{ github.event.inputs.version }}' --include-symbols --include-source
+      run: dotnet pack -c Release src/Observability.Abstractions/MCIO.Observability.Abstractions.csproj /p:Version='${{ github.event.inputs.version }}' --include-symbols --include-source
 
     - name: Publish
       run: dotnet nuget push **/*${{ github.event.inputs.version }}.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
