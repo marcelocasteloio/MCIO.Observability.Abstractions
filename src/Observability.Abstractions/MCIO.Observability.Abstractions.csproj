@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<PackageId>MarceloCastelo.Observability.Abstractions</PackageId>
+		<PackageId>MarceloCastelo.IO.Observability.Abstractions</PackageId>
 		<Copyright>marcelocastelo.io</Copyright>
 		<Authors>marcelocastelo.io</Authors>
 		<Company>marcelocastelo.io</Company>
