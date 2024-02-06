@@ -19,7 +19,6 @@ namespace MCIO.Observability.Abstractions
         Task<TOutput> StartActivityAsync<TOutput>(string traceName, ActivityKind kind, ExecutionInfo executionInfo, Func<Activity, ExecutionInfo, CancellationToken, Task<TOutput>> handler, CancellationToken cancellationToken);
         Task<TOutput> StartActivityAsync<TInput, TOutput>(string traceName, ActivityKind kind, ExecutionInfo executionInfo, TInput input, Func<Activity, ExecutionInfo, TInput, CancellationToken, Task<TOutput>> handler, CancellationToken cancellationToken);
 
-
         void StartInternalActivity(string traceName, ExecutionInfo executionInfo, Action<Activity, ExecutionInfo> handler);
         void StartInternalActivity<TInput>(string traceName, ExecutionInfo executionInfo, TInput input, Action<Activity, ExecutionInfo, TInput> handler);
         TOutput StartInternalActivity<TOutput>(string traceName, ExecutionInfo executionInfo, Func<Activity, ExecutionInfo, TOutput> handler);
@@ -70,5 +69,4 @@ namespace MCIO.Observability.Abstractions
         Task<TOutput> StartProducerActivityAsync<TInput, TOutput>(string traceName, ExecutionInfo executionInfo, TInput input, Func<Activity, ExecutionInfo, TInput, CancellationToken, Task<TOutput>> handler, CancellationToken cancellationToken);
         Task StartProducerActivityAsync(string traceName, ExecutionInfo executionInfo, Func<Activity, ExecutionInfo, CancellationToken, Task> handler, CancellationToken cancellationToken);
     }
-
 }
