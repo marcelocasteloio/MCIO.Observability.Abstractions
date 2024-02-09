@@ -18,7 +18,7 @@ public class ObservableGaugeTest
         // Assert
         observableGauge.Name.Should().Be(name);
         observableGauge.Description.Should().Be(description);
-        observableGauge.Unity.Should().Be(unity);
+        observableGauge.Unit.Should().Be(unity);
         observableGauge.IsValid.Should().BeTrue();
     }
 
@@ -36,7 +36,7 @@ public class ObservableGaugeTest
         // Assert
         observableGauge.Name.Should().Be(name);
         observableGauge.Description.Should().Be(description);
-        observableGauge.Unity.Should().Be(unity);
+        observableGauge.Unit.Should().Be(unity);
         observableGauge.IsValid.Should().BeTrue();
     }
 
@@ -49,7 +49,7 @@ public class ObservableGaugeTest
         // Assert
         observableGauge.Name.Should().BeNull();
         observableGauge.Description.Should().BeNull();
-        observableGauge.Unity.Should().BeNull();
+        observableGauge.Unit.Should().BeNull();
         observableGauge.IsValid.Should().BeFalse();
     }
 
