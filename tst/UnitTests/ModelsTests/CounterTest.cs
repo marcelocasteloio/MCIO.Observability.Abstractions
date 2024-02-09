@@ -18,7 +18,7 @@ public class CounterTest
         // Assert
         counter.Name.Should().Be(name);
         counter.Description.Should().Be(description);
-        counter.Unity.Should().Be(unity);
+        counter.Unit.Should().Be(unity);
         counter.IsValid.Should().BeTrue();
     }
 
@@ -36,7 +36,7 @@ public class CounterTest
         // Assert
         counter.Name.Should().Be(name);
         counter.Description.Should().Be(description);
-        counter.Unity.Should().Be(unity);
+        counter.Unit.Should().Be(unity);
         counter.IsValid.Should().BeTrue();
     }
 
@@ -49,7 +49,7 @@ public class CounterTest
         // Assert
         counter.Name.Should().BeNull();
         counter.Description.Should().BeNull();
-        counter.Unity.Should().BeNull();
+        counter.Unit.Should().BeNull();
         counter.IsValid.Should().BeFalse();
     }
 

@@ -12,19 +12,19 @@ namespace MCIO.Observability.Abstractions.Models
         // Properties
         public string Name { get; }
         public string Description { get; }
-        public string Unity { get; }
+        public string Unit { get; }
         public bool IsValid { get; }
 
         // Constructors
         private Histogram(
             string name,
             string description,
-            string unity
+            string unit
         )
         {
             Name = name;
             Description = description;
-            Unity = unity;
+            Unit = unit;
             IsValid = true;
         }
 
@@ -32,7 +32,7 @@ namespace MCIO.Observability.Abstractions.Models
         public static OutputEnvelop<Histogram?> Create(
             string name,
             string description,
-            string unity
+            string unit
         )
         {
             return string.IsNullOrWhiteSpace(name)
@@ -48,7 +48,7 @@ namespace MCIO.Observability.Abstractions.Models
                     exceptionCollection: null
                 )
                 : OutputEnvelop<Histogram?>.CreateSuccess(
-                    new Histogram(name, description, unity)
+                    new Histogram(name, description, unit)
                 );
         }
     }

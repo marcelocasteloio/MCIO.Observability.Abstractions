@@ -12,19 +12,19 @@ namespace MCIO.Observability.Abstractions.Models
         // Properties
         public string Name { get; }
         public string Description { get; }
-        public string Unity { get; }
+        public string Unit { get; }
         public bool IsValid { get; }
 
         // Constructors
         private Counter(
             string name,
             string description,
-            string unity
+            string unit
         )
         {
             Name = name;
             Description = description;
-            Unity = unity;
+            Unit = unit;
             IsValid = true;
         }
 
@@ -32,7 +32,7 @@ namespace MCIO.Observability.Abstractions.Models
         public static OutputEnvelop<Counter?> Create(
             string name, 
             string description, 
-            string unity
+            string unit
         )
         {
             return string.IsNullOrWhiteSpace(name)
@@ -48,7 +48,7 @@ namespace MCIO.Observability.Abstractions.Models
                     exceptionCollection: null
                 )
                 : OutputEnvelop<Counter?>.CreateSuccess(
-                    new Counter(name, description, unity)
+                    new Counter(name, description, unit)
                 );
         }
     }

@@ -18,7 +18,7 @@ public class HistogramTest
         // Assert
         histogram.Name.Should().Be(name);
         histogram.Description.Should().Be(description);
-        histogram.Unity.Should().Be(unity);
+        histogram.Unit.Should().Be(unity);
         histogram.IsValid.Should().BeTrue();
     }
 
@@ -36,7 +36,7 @@ public class HistogramTest
         // Assert
         histogram.Name.Should().Be(name);
         histogram.Description.Should().Be(description);
-        histogram.Unity.Should().Be(unity);
+        histogram.Unit.Should().Be(unity);
         histogram.IsValid.Should().BeTrue();
     }
 
@@ -49,7 +49,7 @@ public class HistogramTest
         // Assert
         histogram.Name.Should().BeNull();
         histogram.Description.Should().BeNull();
-        histogram.Unity.Should().BeNull();
+        histogram.Unit.Should().BeNull();
         histogram.IsValid.Should().BeFalse();
     }
 
